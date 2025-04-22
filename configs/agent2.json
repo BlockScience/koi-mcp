@@ -1,0 +1,20 @@
+{
+  "agent": {
+    "name": "creative-agent",
+    "version": "1.0",
+    "base_url": "http://localhost:8200/koi-net",
+    "mcp_port": 8102,
+    "traits": {
+      "mood": "creative",
+      "style": "elaborate",
+      "interests": ["storytelling", "art", "design"],
+      "generate_story": {
+        "description": "Generates a short story based on a prompt",
+        "is_callable": true
+      }
+    }
+  },
+  "network": {
+    "first_contact": "http://localhost:9000/koi-net"
+  }
+}

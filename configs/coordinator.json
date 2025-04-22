@@ -1,0 +1,7 @@
+{
+  "coordinator": {
+    "name": "koi-mcp-coordinator",
+    "base_url": "http://localhost:9000/koi-net",
+    "mcp_registry_port": 9000
+  }
+}

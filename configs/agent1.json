@@ -1,0 +1,20 @@
+{
+  "agent": {
+    "name": "helpful-agent",
+    "version": "1.0",
+    "base_url": "http://localhost:8100/koi-net",
+    "mcp_port": 8101,
+    "traits": {
+      "mood": "helpful",
+      "style": "concise",
+      "interests": ["ai", "knowledge-graphs"],
+      "calculate": {
+        "description": "Performs simple calculations",
+        "is_callable": true
+      }
+    }
+  },
+  "network": {
+    "first_contact": "http://localhost:9000/koi-net"
+  }
+}
