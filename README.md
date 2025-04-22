@@ -18,20 +18,28 @@ A bridging framework that integrates the Knowledge Organization Infrastructure (
 
 ```bash
 # Clone the repository
-git clone https://github.com/block-science/koi-mcp-v1.git
-cd koi-mcp-v1
+git clone https://github.com/block-science/koi-mcp.git
+cd koi-mcp
 
 # Create and activate virtual environment
-python -m venv .venv
+uv venv --python 3.12
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
 # Install the package with development dependencies
-pip install -e ".[dev]"
+uv pip install -e ".[dev]"
 ```
 
 ### Running the Demo
 
-The quickest way to see KOI-MCP in action is to run the built-in demo:
+The quickest way to see KOI-MCP in action is to run the demo:
+
+```bash
+python scripts/demo.py
+```
+
+This provides a rich interactive console with detailed event logging and component status displays.
+
+Alternatively, you can run a simplified demo using the main module:
 
 ```bash
 # Run demo (starts coordinator and two example agents)
@@ -276,16 +284,6 @@ pytest
 # Run tests with coverage report
 pytest --cov=koi_mcp
 ```
-
-### Debug Mode
-
-For enhanced debugging, use the `scripts/demo.py` script:
-
-```bash
-python scripts/demo.py
-```
-
-This provides a rich interactive console with detailed event logging and component status displays.
 
 ## Project Structure
 
