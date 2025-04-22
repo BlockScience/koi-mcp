@@ -1,3 +1,4 @@
+import os
 import logging
 import uvicorn
 from fastapi import FastAPI
@@ -27,6 +28,7 @@ class CoordinatorAdapterNode:
                  name: str, 
                  base_url: str,
                  mcp_registry_port: int = 9000):
+        os.makedirs(f".koi/{name}", exist_ok=True)
         # 1. Build NodeInterface with built-in subscription to AgentPersonality
         self.node = NodeInterface(
             name=name,

@@ -1,5 +1,5 @@
 # src/koi_mcp/koi/node/agent.py
-
+import os
 import logging
 from typing import Dict, Any, Optional
 
@@ -31,6 +31,7 @@ class KoiAgentNode:
         mcp_port: int,
         first_contact: Optional[str] = None,
     ):
+        os.makedirs(f".koi/{name}", exist_ok=True)
         # 1. Convert raw traits dict into PersonalityTrait list
         self.traits: list[PersonalityTrait] = []
         for trait_name, trait_info in traits.items():
