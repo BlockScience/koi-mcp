@@ -15,6 +15,7 @@ A full‑blown KOI‑MCP integration demo that:
 """
 
 import subprocess, threading, time, signal, sys, os, urllib.parse
+import os
 import httpx
 from rich.console import Console
 from rich.table import Table
@@ -196,6 +197,9 @@ def shutdown(signum=None, frame=None):
 def main():
     signal.signal(signal.SIGINT, shutdown)
     signal.signal(signal.SIGTERM, shutdown)
+
+    for name in ["koi-mcp-coordinator", "helpful-agent", "creative-agent"]:
+        os.makedirs(f".koi/{name}", exist_ok=True)
     try:
         global procs
         procs = []

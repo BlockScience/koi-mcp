@@ -38,7 +38,10 @@ class CoordinatorAdapterNode:
                     state=[KoiNetNode, KoiNetEdge, AgentPersonality]
                 )
             ),
-            use_kobj_processor_thread=True
+            use_kobj_processor_thread=True,
+            identity_file_path=f".koi/{name}/{name}_identity.json",
+            event_queues_file_path=f".koi/{name}/{name}_event_queues.json",
+            cache_directory_path=f".koi/{name}/rid_cache_{name}"
         )
         
         # 2. Install MCP adapter and kill manual broadcasts
