@@ -312,17 +312,6 @@ koi-mcp/
 └── tests/                   # Test suite
 ```
 
-## Limitations and Future Work
-
-- **Implementation Status**: This is a proof-of-concept implementation and may not be suitable for production use
-- **Security**: No authentication mechanisms are currently implemented
-- **Tool Invocation**: The current implementation returns static trait values instead of real function calls
-- **Planned Improvements**:
-  - Authentication and authorization for MCP endpoints
-  - More sophisticated trait invocation with actual function execution
-  - Support for binary data in trait values and results
-  - Bi-directional synchronization of trait updates between agents
-
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
