@@ -10,8 +10,11 @@ class MCPAdapter:
     def __init__(self):
         self.agents: Dict[str, PersonalityProfile] = {}
         
-    def register_agent(self, profile: PersonalityProfile):
-        """Register an agent profile with the adapter."""
+    def register_agent(self, profile):
+        # If we’ve already registered this agent, do nothing
+        if profile.rid.name in self.agents:
+            logger.debug(f"Agent {profile.rid.name} is already registered, skipping")
+            return
         logger.info(f"Registering agent {profile.rid.name}")
         self.agents[profile.rid.name] = profile
         
